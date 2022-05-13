@@ -4,7 +4,7 @@ const key = 'd61009a601fa46786ad8bc076c1cd143'
 if ("geolocation" in navigator) {
   navigator.geolocation.getCurrentPosition(function(position) {
     getData(position.coords.latitude, position.coords.longitude);
-  });
+  }, getData(-23.5489, -46.6388));
 } else {
   getData(-23.5489, -46.6388)
   alert("Sinto muito, mas os serviços de geolocalização não são suportados pelo seu navegador. Por padrão, usaremos a geolocalização de São Paulo.");
